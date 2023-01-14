@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color:#fff;
+  font-family: 'Teko', sans-serif;
+}
+
+:root {
+  --background-color:#21293D;
+  --main-color:#FF780A;
+  --secondary-color:#FFB817;
+  --right-color:#24FFA5;
+  --wrong-color:#FF3C17;
+  --text-color:#fff;
+}

@@ -1,0 +1,45 @@
+.c-quiz{
+    width:60%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.c-quiz__title{
+    font-size:3em;
+}
+
+.c-quiz__line{
+    border: 1px solid var(--main-color);
+    width:40%;
+}
+
+.c-quiz__button{
+    margin:10% 0;
+    font-size:2em;
+    height: 8%;
+    width:60%;
+    padding: 0.2rem 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius:0.25em;
+}
+
+.c-quiz__button:hover{
+    font-size:2.2em;
+}
+
+.c-imgC{
+    width:40%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.c-imgC__img{
+    width:100%;
+    height:90%;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+}

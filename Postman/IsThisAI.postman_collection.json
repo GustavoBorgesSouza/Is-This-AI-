@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "d92f080e-1ebf-4f09-9a09-b94bd58c7165",
+		"name": "IsThisAI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17268779"
+	},
+	"item": [
+		{
+			"name": "Azure Describe Images",
+			"item": [
+				{
+					"name": "describeImageByUrl",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Ocp-Apim-Subscription-Key",
+								"value": "c1bd3bd94cfe407f8d8dd3698de58fa9",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\":\"https://images.unsplash.com/photo-1673368777965-e5c22a665a16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzOTg0Mzh8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzM2MTI5NTk&ixlib=rb-4.0.3&q=80&w=400\"  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://eastus.api.cognitive.microsoft.com/vision/v3.2/describe?maxCandidates=1&language=en&model-version=latest",
+							"protocol": "https",
+							"host": [
+								"eastus",
+								"api",
+								"cognitive",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"vision",
+								"v3.2",
+								"describe"
+							],
+							"query": [
+								{
+									"key": "maxCandidates",
+									"value": "1"
+								},
+								{
+									"key": "language",
+									"value": "en"
+								},
+								{
+									"key": "model-version",
+									"value": "latest"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unsplash API",
+			"item": [
+				{
+					"name": "unsplashGetRandomImage",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Client-ID H5dQ6Tk1LLJ7Quc5orG1sBVrfjjnuHfOD7MCj18cRME",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.unsplash.com/photos/random?orientation=squarish",
+							"protocol": "https",
+							"host": [
+								"api",
+								"unsplash",
+								"com"
+							],
+							"path": [
+								"photos",
+								"random"
+							],
+							"query": [
+								{
+									"key": "orientation",
+									"value": "squarish"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,23 @@
+.container{
+    /* background-color: blue; */
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.c-header{
+    /* background-color:purple; */
+    max-width: 1440px;
+    width: 95%;
+    height:6em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom: 2px solid var(--main-color);
+}
+
+.header-img{
+    height:85%;
+    width:auto;
+}
