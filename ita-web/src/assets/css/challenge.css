@@ -18,15 +18,17 @@
 .c-quiz__button{
     margin:10% 0;
     font-size:2em;
-    height: 8%;
+    min-height: 8%;
     width:60%;
+    word-break: break-word;
     padding: 0.2rem 1rem;
     border: 1px solid var(--secondary-color);
     border-radius:0.25em;
 }
 
 .c-quiz__button:hover{
-    font-size:2.2em;
+    background-color: #e0e0e0;
+    color: var(--background-color);
 }
 
 .c-imgC{
