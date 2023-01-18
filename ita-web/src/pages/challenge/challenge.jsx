@@ -2,12 +2,12 @@
 import "../../assets/css/challenge.css"
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFire, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 
 //imports components
 import Header from "../../components/header/header.jsx";
 import Footer from "../../components/footer/footer";
-import { faFire, faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Challenge() {
@@ -22,8 +22,12 @@ export default function Challenge() {
   const [photoAIDescription, setPhotoAIDescription] = useState("");
 
   const [points, setPoints] = useState(0);
+  //boolean used to set the loading of requests and data
   const [isLoading, setIsLoading] = useState(false);
+  //boolean used to shuffle the descriptions buttons order
+  const [randomizer, setRandomizer] = useState(true);
 
+  //function that will make a request to the Unsplash API to get a random photo
   function GetRandomPhoto() {
     setIsLoading(true);
     var unsplashUrl = "https://api.unsplash.com/photos/random?orientation=squarish";
@@ -45,7 +49,7 @@ export default function Challenge() {
   }
 
 
-
+  //function that will make a request to the azure API, using their computer vision cognitive service to get an image description
   function GetAIDescription() {
     var azureAIUrl = "https://captioncreator.cognitiveservices.azure.com/vision/v3.2/describe?maxCandidates=1&language=en&model-version=latest";
 
@@ -61,21 +65,25 @@ export default function Challenge() {
       .then((data) => {
         // console.log(data);
         setPhotoAIDescription(data.description.captions[0].text);
+        setRandomizer(Math.random() < 0.5);
         setIsLoading(false);
       })
   }
 
+  ///function that gives one point to the user, shuffle the buttons and get a random photo through the GetRandomPhoto() function
   function EarnPoint() {
     setPoints(points + 1);
-
+    
     GetRandomPhoto();
     // console.log(`${points} points`)
   }
 
+  //useEffect that will be triggered when the page loads, gets a random photo through the GetRandomPhoto() function
   useEffect(() => {
     GetRandomPhoto();
   }, []);
 
+  //useEffect that will trigger when the link of the photo changes, therefore changing the AI description through the GetAIDescription() function
   useEffect(() => {
     GetAIDescription();
   }, [photoLink]);
@@ -91,31 +99,60 @@ export default function Challenge() {
             <span>Photo by <a href={photoUserLink}> {photoUserName} </a> on <a href={photoLink}>Unsplash</a> </span>
           </section>
 
-          <section className="c-quiz">
+          <section id="quizContainer" className="c-quiz">
             <h1 className="c-quiz__title">Which description was AI generated?</h1>
 
             {
-              isLoading === false ? (
-                <button onClick={() => GetRandomPhoto()} className="c-quiz__button">{photoAltDescription}</button>
+              randomizer ? (
+                <div>
+                  {
+                    isLoading === false ? (
+                      <button onClick={() => GetRandomPhoto()} className="c-quiz__button">{photoAltDescription}</button>
+                    ) : (
+                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                    )
+                  }
+
+                  <hr className="c-quiz__line" />
+
+                  {
+                    isLoading === false ? (
+                      <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
+                    ) : (
+                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                    )
+                  }
+                </div>
+
               ) : (
-                <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+
+                <div>
+                  {
+                    isLoading === false ? (
+                      <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
+                    ) : (
+                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                    )
+                  }
+                  
+                  <hr className="c-quiz__line" />
+
+                  {
+                    isLoading === false ? (
+                      <button onClick={() => GetRandomPhoto()} className="c-quiz__button">{photoAltDescription}</button>
+                    ) : (
+                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                    )
+                  }
+
+                </div>
               )
             }
 
-            <hr className="c-quiz__line" />
-
-            {
-              isLoading === false ? (
-                <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
-              ) : (
-                <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
-              )
-            }
-
+            //
             {
               points === 1 ? (
                 <p>{points} point <FontAwesomeIcon icon={faFire} /> </p>
-
               ) : (
                 <p>{points} points <FontAwesomeIcon icon={faFire} /> </p>
               )
