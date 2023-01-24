@@ -11,6 +11,7 @@
 Are you ready for the “Is This AI?” challenge??
 
 The challenge consists in reading two captions for the shown image, your goal is to guess which description was made by an Artifical Intelligence.
+To do so, two APIs have been used, the Unsplash API to get the photos and the human made caption and the Azure Computer Vision Cognitive Service to get an AI description for the given image. The Single Page application was made using the React library, planned in Trello and designed in Figma. 
 
 ![](video canva)
 
@@ -71,8 +72,12 @@ If you need to stop running locally, press Ctrl+C, read the message and answer a
 [![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:sgustavo.borges10@gmail.com)
   
 <div/>
-  
-  
+
+### Planning and Design
+   To organize the backlog of the project a kanban board was created in [Trello](https://trello.com/b/psdzwJlf/project-is-this-ai) 
+   <br>
+   The layouts and style guide were made in a [Figma design file](https://www.figma.com/file/ASH8pEhBJvMF7m7LsfdEKv/Is-This-AI?node-id=0%3A1&t=oE46OAFUlVhSFgoP-1)
+   
 ### Contributing
   Contributions such as feature requests, issues reporting and honest reviews are welcome! 🤝
 ### Show your support
