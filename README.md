@@ -1,4 +1,6 @@
 # Is This AI?
+><a href="https://github.com/GustavoBorgesSouza/Is-This-AI-/blob/main/README-PT.md">🇧🇷 Não fala inglês? Clique aqui para ler a versão em português.</a>
+><br>
 >Will you be able to read image descriptions and differ which caption was AI generated?
 
 <br>
