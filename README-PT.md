@@ -1,5 +1,7 @@
 # Is This AI?
->Will you be able to read image descriptions and differ which caption was AI generated?
+><a href="https://github.com/GustavoBorgesSouza/Is-This-AI-/blob/main/README.md">🇺🇸 Do not speak Portuguese? Click here to read the English version.</a>
+><br>
+>Você é capaz de ler as descrições de uma imagem e diferenciar qual delas foi gerada por Inteligência Artficial?
 <br>
 <div align="center">
 
@@ -7,60 +9,60 @@
 
 </div>
 
-Are you ready for the “Is This AI?” challenge??
+Você está pronto para o desafio “Is This AI?”(Isso é IA)??
 
-The challenge consists in reading two captions for the shown image, your goal is to guess which description was made by an Artifical Intelligence.
-To do so, two APIs have been used, the Unsplash API to get the photos and the human made caption and the Azure Computer Vision Cognitive Service to get an AI description for the given image. The Single Page application was made using the React library, planned in Trello and designed in Figma. 
+O desafio consiste em ler duas legendas para a imagem mostrada e seu objetivo é adivinhar qual das descrições foi feita por uma Inteligencia Artificial.
+Para isso, duas APIs foram usadas, a API do Unsplash para pegar as fotos e a descrição feita por um humano e a API da Azure usando o Serviço Cognitivo de Visão Computacional para gerar uma descrição feita por IA para a imagem dada. A Single Page Application(Aplicação de página única) foi feita usando a biblioteca Reactjs, Planejado no Trello e modelo/desing feito no Figma.
 
 ![](video canva)
 
-## Web Access
+## Acesso Web
 
-Through the link below you will have acces to the web version of the app.
+Pelo Link abaixo você terá acesso a versão web da aplicação.
 
 https://isthisai.vercel.app/
 
-## Mobile App
+## Aplicativo Móvel
 
-Coming soon...
+Em breve...
 
-## Running Locally / Installation
+## Rodando Localmente / Instalação
 
-Clone the repository
+Clone o repositorio
 
 ```sh
 git clone https://github.com/GustavoBorgesSouza/Is-This-AI-.git
 ```
 
-Open the cmd in the ita-web folder and start running it
+Abra o cmd na pasta ita-web e comece a rodar
 
 ```sh
 npm start
 ```
 
-If you need to stop running locally, press Ctrl+C, read the message and answer affirmatively.
+Caso você precise parar de rodar localmente, aperte Ctrl+C, leia a mensagem no terminal e responda afirmativamente.
 
-## Release History
+## Histótico de versões 
 
 * 0.6.0
-    * FIX: Adaptive/responsive layouts for the footer component and the landing page
+    * ARRUMA: Layouts Adaptivos/responsivos para o componente rodapé e página de boas vindas
 * 0.5.0
-    * CHANGE: Update docs
+    * MUDA: Atualiza documentação
 * 0.4.0
-    * ADD: Shuffle buttons with descriptions
+    * ADICIONA: Embaralha botões com as descrições
 * 0.3.0
-    * CHANGE: Hover for buttons
+    * MUDA: Hover dos botões
 * 0.2.0
-    * FIX: Phrases Loading (Were not loading at the same time)
-    * ADD: Points system and hover for buttons 
+    * ARRUMA: Carregamento de frases (Não estavam aparecendo ao mesmo tempo na tela)
+    * ADICIONA: Sistema de pontos e hover nos botões
 * 0.1.0
-    * ADD: Pages and components in react app
+    * ADICIONA: Páginas e componentes no react-app
 * 0.0.1
-    * Work in progress 
+    * Trabalho em andamento 
 
 ## Meta
 
-### Author
+### Autor
 
 *Gustavo Borges de Souza* 🤠
 
@@ -72,14 +74,14 @@ If you need to stop running locally, press Ctrl+C, read the message and answer a
   
 <div/>
 
-### Planning and Design
-   To organize the backlog of the project a kanban board was created in [Trello](https://trello.com/b/psdzwJlf/project-is-this-ai) 
+### Planejamento e design
+   Para organizar as tarefas a serem feitas no projeto um quadro kanban foi criado no [Trello](https://trello.com/b/psdzwJlf/project-is-this-ai) 
    <br>
-   The layouts and style guide were made in a [Figma design file](https://www.figma.com/file/ASH8pEhBJvMF7m7LsfdEKv/Is-This-AI?node-id=0%3A1&t=oE46OAFUlVhSFgoP-1)
+   Os layouts e guia de estilos foram feitos em um [Figma design file](https://www.figma.com/file/ASH8pEhBJvMF7m7LsfdEKv/Is-This-AI?node-id=0%3A1&t=oE46OAFUlVhSFgoP-1)
    
-### Contributing
-  Contributions such as feature requests, issues reporting and honest reviews are welcome! 🤝
-### Show your support
-  Give a star if you liked the project or if it has been useful to you! 🌟
-### License
+### Contribuições
+   Conrtibuições como pedidos de funcionalidades, comunicação de problemas, críticas construtivas e análises honestas são muito bem vindas! 🤝
+### Mostre seu suporte
+  Dê uma estrela se você gostou do projeto ou se lhe foi útil de alguma forma! 🌟
+### Licença
   Copyright ©2023 [Gustavo Borges](https://github.com/GustavoBorgesSouza)
