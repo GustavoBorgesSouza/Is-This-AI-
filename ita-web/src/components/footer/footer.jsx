@@ -8,6 +8,7 @@ export default function Footer() {
         <footer className="containerF">
             <div className="c-footer">
                 <p className="c-footer__text">Developed by Gustavo Borges de Souza</p>
+                <p className="c-footer__textMobile">By Gustavo Borges</p>
 
                 <section className="c-icons">
                     <a className="c-icons__icon" href="https://www.linkedin.com/in/gustavoborgessouza/ "> <FontAwesomeIcon icon={faLinkedin} size="2x" style={{backgroundColor:"var(--secondary-color)", color: "var(--background-color)"}} /> </a>

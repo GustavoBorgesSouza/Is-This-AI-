@@ -4,7 +4,7 @@ import Logo from "../../assets/img/IsThisAILogo.svg"
 
 export default function Header() {
     return (
-      <header className="container">
+      <header className="containerH">
         <div className="c-header">
             <img className="header-img" src={Logo} alt="is this ai? challenge logo" />
         </div>

@@ -13,11 +13,13 @@ import Footer from "../../components/footer/footer";
 export default function Challenge() {
 
   //states
+  const [photoReferralLink, setPhotoReferralLink] = useState("");
+
   const [photoLink, setPhotoLink] = useState("");
+
   const [photoAltDescription, setPhotoAltDescription] = useState("");
   const [photoUserName, setPhotoUserName] = useState("");
   const [photoUserLink, setPhotoUserLink] = useState("");
-
 
   const [photoAIDescription, setPhotoAIDescription] = useState("");
 
@@ -44,6 +46,7 @@ export default function Challenge() {
         setPhotoAltDescription(data.alt_description);
         setPhotoUserName(data.user.name);
         setPhotoUserLink(data.user.links.html);
+        setPhotoReferralLink(data.links.html);
       })
 
   }
@@ -73,7 +76,7 @@ export default function Challenge() {
   ///function that gives one point to the user, shuffle the buttons and get a random photo through the GetRandomPhoto() function
   function EarnPoint() {
     setPoints(points + 1);
-    
+
     GetRandomPhoto();
     // console.log(`${points} points`)
   }
@@ -96,15 +99,15 @@ export default function Challenge() {
 
           <section className="c-imgC">
             <img className="c-imgC__img" src={photoLink} alt={"Random photo: " + photoAltDescription + " or " + photoAIDescription} />
-            <span>Photo by <a href={photoUserLink}> {photoUserName} </a> on <a href={photoLink}>Unsplash</a> </span>
+            <span className="c-img__referral">Photo by <a href={photoUserLink}> {photoUserName} </a> on <a href={photoReferralLink}>Unsplash</a> </span>
           </section>
 
-          <section id="quizContainer" className="c-quiz">
+          <section className="c-quiz">
             <h1 className="c-quiz__title">Which description was AI generated?</h1>
 
             {
               randomizer ? (
-                <div>
+                <div className="c-quizRandom">
                   {
                     isLoading === false ? (
                       <button onClick={() => GetRandomPhoto()} className="c-quiz__button">{photoAltDescription}</button>
@@ -126,15 +129,14 @@ export default function Challenge() {
 
               ) : (
 
-                <div>
-                  {
-                    isLoading === false ? (
-                      <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
-                    ) : (
-                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
-                    )
-                  }
-                  
+                <div className="c-quizRandom">                  {
+                  isLoading === false ? (
+                    <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
+                  ) : (
+                    <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                  )
+                }
+
                   <hr className="c-quiz__line" />
 
                   {
@@ -149,12 +151,11 @@ export default function Challenge() {
               )
             }
 
-            //
             {
               points === 1 ? (
-                <p>{points} point <FontAwesomeIcon icon={faFire} /> </p>
+                <p className="c-quizPoints">{points} point <FontAwesomeIcon icon={faFire} /> </p>
               ) : (
-                <p>{points} points <FontAwesomeIcon icon={faFire} /> </p>
+                <p className="c-quizPoints">{points} points <FontAwesomeIcon icon={faFire} /> </p>
               )
             }
 
