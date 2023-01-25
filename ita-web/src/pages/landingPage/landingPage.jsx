@@ -1,7 +1,6 @@
 //imports
 import "../../assets/css/landingpage.css"
-import React, { useRef, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 //imports components
 import Header from "../../components/header/header.jsx";

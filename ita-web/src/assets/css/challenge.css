@@ -46,7 +46,18 @@
     color:#fff;
 }
 
-.c-quiz__button:hover{
+.c-quiz__button:hover
+{
+    background-color: #e0e0e0;
+    color: var(--background-color);
+}
+
+.c-quiz__buttonIcon{
+    color: #e0e0e0;
+    background-color: var(--background-color);
+}
+
+.c-quiz__buttonIcon:hover{
     background-color: #e0e0e0;
     color: var(--background-color);
 }

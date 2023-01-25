@@ -132,7 +132,7 @@ export default function Challenge() {
                   isLoading === false ? (
                     <button onClick={() => EarnPoint()} className="c-quiz__button">{photoAIDescription}</button>
                   ) : (
-                    <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                    <button disabled className="c-quiz__button"> <FontAwesomeIcon className="c-quiz__buttonIcon" icon={faSpinner} spin /></button>
                   )
                 }
 
@@ -142,7 +142,7 @@ export default function Challenge() {
                     isLoading === false ? (
                       <button onClick={() => GetRandomPhoto()} className="c-quiz__button">{photoAltDescription}</button>
                     ) : (
-                      <button disabled className="c-quiz__button"> <FontAwesomeIcon icon={faSpinner} spin /></button>
+                      <button disabled className="c-quiz__button"> <FontAwesomeIcon className="c-quiz__buttonIcon" icon={faSpinner} spin /></button>
                     )
                   }
 
