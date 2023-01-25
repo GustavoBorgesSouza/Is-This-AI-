@@ -6,6 +6,8 @@
     align-items:center;
     margin: 4em 0;
     color:#fff;
+    background-color: var(--background-color);
+
 }
 
 .c-quiz{
@@ -44,6 +46,7 @@
     border: 1px solid var(--secondary-color);
     border-radius:0.25em;
     color:#fff;
+    background-color: var(--background-color);
 }
 
 .c-quiz__button:hover
