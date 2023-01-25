@@ -13,7 +13,7 @@ import Footer from "../../components/footer/footer";
 export default function Challenge() {
 
   //states
-  const [photoReferralLink, setPhotoReferralLink] = useState("");
+  const [photoReferralLink, setPhotoReferralLink] = useState("https://unsplash.com/pt-br?utm_source=isthisaie&utm_medium=referral");
 
   const [photoLink, setPhotoLink] = useState("");
 
@@ -45,8 +45,7 @@ export default function Challenge() {
         setPhotoLink(data.urls.regular);
         setPhotoAltDescription(data.alt_description);
         setPhotoUserName(data.user.name);
-        setPhotoUserLink(data.user.links.html);
-        setPhotoReferralLink(data.links.html);
+        setPhotoUserLink(data.user.links.html + "?utm_source=isthisai&utm_medium=referral");
       })
 
   }
@@ -95,11 +94,11 @@ export default function Challenge() {
     <div>
       <Header />
       <main className="container">
-        <div className="c-main">
+        <div className="c-mainChallenge">
 
           <section className="c-imgC">
             <img className="c-imgC__img" src={photoLink} alt={"Random photo: " + photoAltDescription + " or " + photoAIDescription} />
-            <span className="c-img__referral">Photo by <a href={photoUserLink}> {photoUserName} </a> on <a href={photoReferralLink}>Unsplash</a> </span>
+            <span className="c-img__referral">Photo by <a className="c-img__referral" href={photoUserLink}> {photoUserName} </a> on <a className="c-img__referral" href={photoReferralLink}>Unsplash</a> </span>
           </section>
 
           <section className="c-quiz">

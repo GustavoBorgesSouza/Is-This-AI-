@@ -12,7 +12,7 @@ export default function Footer() {
 
                 <section className="c-icons">
                     <a className="c-icons__icon" href="https://www.linkedin.com/in/gustavoborgessouza/ "> <FontAwesomeIcon icon={faLinkedin} size="2x" style={{backgroundColor:"var(--secondary-color)", color: "var(--background-color)"}} /> </a>
-                    <a className="c-icons__icon"  href="https://github.com/GustavoBorgesSouza"><FontAwesomeIcon icon={faGithubSquare} size="2x" style={{backgroundColor:"var(--secondary-color)", color:"gray"}} /></a>
+                    <a className="c-icons__icon"  href="https://github.com/GustavoBorgesSouza"><FontAwesomeIcon icon={faGithubSquare} size="2x" style={{backgroundColor:"var(--secondary-color)", color:"var(--background-color)"}} /></a>
                 </section>
             </div>
         </footer>
