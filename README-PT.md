@@ -14,7 +14,10 @@ Você está pronto para o desafio “Is This AI?”(Isso é IA)??
 O desafio consiste em ler duas legendas para a imagem mostrada e seu objetivo é adivinhar qual das descrições foi feita por uma Inteligencia Artificial.
 Para isso, duas APIs foram usadas, a API do Unsplash para pegar as fotos e a descrição feita por um humano e a API da Azure usando o Serviço Cognitivo de Visão Computacional para gerar uma descrição feita por IA para a imagem dada. A Single Page Application(Aplicação de página única) foi feita usando a biblioteca Reactjs, Planejado no Trello e modelo/desing feito no Figma.
 
-![](video canva)
+
+https://user-images.githubusercontent.com/82384564/214917319-449c5806-ad6f-4da0-9171-080fc2923cab.mp4
+
+
 
 ## Acesso Web
 
@@ -44,6 +47,14 @@ Caso você precise parar de rodar localmente, aperte Ctrl+C, leia a mensagem no 
 
 ## Histótico de versões 
 
+* 1.0.0
+    * Fist official release
+* 0.9.0
+    * ARRUMA: Ajustes de css
+* 0.8.0
+    * ADICIONA: Testes frontend E2E usando cypress
+* 0.7.0
+    * ADICIONA: Layouts Adaptativos/responsivos para a página de desafio
 * 0.6.0
     * ARRUMA: Layouts Adaptivos/responsivos para o componente rodapé e página de boas vindas
 * 0.5.0
