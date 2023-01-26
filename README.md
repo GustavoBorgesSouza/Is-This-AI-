@@ -15,7 +15,10 @@ Are you ready for the “Is This AI?” challenge??
 The challenge consists in reading two captions for the shown image, your goal is to guess which description was made by an Artifical Intelligence.
 To do so, two APIs have been used, the Unsplash API to get the photos and the human made caption and the Azure Computer Vision Cognitive Service to get an AI description for the given image. The Single Page application was made using the React library, planned in Trello and designed in Figma. 
 
-![](video canva)
+
+https://user-images.githubusercontent.com/82384564/214915815-b5515cdb-5d9b-4b2d-9c55-50481fd0131d.mp4
+
+
 
 ## Web Access
 
@@ -45,8 +48,16 @@ If you need to stop running locally, press Ctrl+C, read the message and answer a
 
 ## Release History
 
+* 1.0.0
+    * Fist official release
+* 0.9.0
+    * FIX: Css adjusts
+* 0.8.0
+    * ADD: Frontend E2E tests using cypress
+* 0.7.0
+    * ADD: Adaptive/Responsive layouts for the challenge page
 * 0.6.0
-    * FIX: Adaptive/responsive layouts for the footer component and the landing page
+    * ADD: Adaptive/responsive layouts for the footer component and the landing page
 * 0.5.0
     * CHANGE: Update docs
 * 0.4.0
