@@ -36,6 +36,11 @@ Clone o repositorio
 ```sh
 git clone https://github.com/GustavoBorgesSouza/Is-This-AI-.git
 ```
+Abra o cmd na pasta ita-web e instale o projeto 
+
+```sh
+npm install
+```
 
 Abra o cmd na pasta ita-web e comece a rodar
 
