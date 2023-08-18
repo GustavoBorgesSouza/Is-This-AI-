@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  uno: ^1.1.9
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_test:
